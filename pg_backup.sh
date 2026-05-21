@@ -30,7 +30,7 @@ fi
 
 # Upload backup to remote storage with rclone
 log "Uploading backup to remote storage..."
-if rclone copy /tmp/immich_backup.tar.bz2 garage:immichpg/$(date +%d-%m-%Y)/immich_backup.tar.bz2 --progress; then
+if rclone copy /tmp/immich_backup.tar.bz2 garage:immichpg/$(date +%d-%m-%Y) --progress; then
   log "Upload successful."
 else
   log "Upload failed."
